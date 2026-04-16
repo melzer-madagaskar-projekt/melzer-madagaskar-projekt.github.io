@@ -1,52 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deutsche NGO für medizinische Unterstützung in Madagaskar</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Melzer-Madagaskar-Projekt</title>
+  <meta name="description" content="Verein zur Unterstützung der medizinischen Versorgung in Süd-Madagaskar." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Willkommen bei unserer NGO</h1>
-        <nav>
-            <ul>
-                <li><a href="#wer-sind-wir">Wer sind wir</a></li>
-                <li><a href="#aktuelle-projekte">Aktuelle Projekte</a></li>
-                <li><a href="#kontakt">Kontakt/Spenden</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="wer-sind-wir">
-        <h2>Wer sind wir</h2>
-        <p>Wir sind eine deutsche NGO, die sich auf die medizinische Unterstützung von bedürftigen Menschen im Süden Madagaskars konzentriert. Unser Ziel ist es, die Lebensbedingungen und die medizinische Versorgung der Menschen vor Ort nachhaltig zu verbessern.</p>
-    </section>
-
-    <section id="aktuelle-projekte">
-        <h2>Aktuelle Projekte</h2>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Melzer-Madagaskar-Projekt</span>
+      </a>
+      <nav aria-label="Hauptnavigation">
         <ul>
-            <li>Projekt A: Verbesserung der Gesundheitsversorgung in Region X</li>
-            <li>Projekt B: Aufbau eines mobilen Gesundheitsdienstes</li>
-            <li>Projekt C: Aufklärung über Hygiene und Prävention</li>
+          <li><a href="#wer-wir-sind">Wer wir sind</a></li>
+          <li><a href="#projekte">Aktuelle Projekte</a></li>
+          <li><a href="#kontakt-spenden">Kontakt / Spenden</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <div class="hero">
+      <div class="panel">
+        <span class="badge">Gemeinsam für bessere medizinische Versorgung in Süd‑Madagaskar</span>
+        <h1>Wir unterstützen Gesundheit dort, wo sie am dringendsten gebraucht wird.</h1>
+        <p class="lead">
+          Als ehrenamtlich geführter Verein arbeiten wir mit lokalen Partner:innen im Süden Madagaskars zusammen,
+          um grundlegende medizinische Versorgung zu stärken – verlässlich, transparent und auf Augenhöhe.
+        </p>
+        <div class="ctaRow">
+          <a class="btn primary" href="#kontakt-spenden">Jetzt spenden</a>
+          <a class="btn" href="#projekte">Projekte ansehen</a>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Kurzüberblick">
+        <h2>Kurzüberblick</h2>
+        <p>
+          Unsere Arbeit fokussiert sich auf Primärversorgung, Prävention und die Stärkung lokaler Strukturen
+          in ländlichen Regionen, die besonders von Dürre, Armut und langen Wegen zur nächsten Gesundheitseinrichtung
+          betroffen sind.
+        </p>
+        <div class="stats">
+          <div class="stat">
+            <strong>Partnerbasiert</strong>
+            <span class="small">Umsetzung mit lokalen Teams</span>
+          </div>
+          <div class="stat">
+            <strong>Bedarfsorientiert</strong>
+            <span class="small">Schwerpunkte nach Region & Saison</span>
+          </div>
+          <div class="stat">
+            <strong>Transparent</strong>
+            <span class="small">Klare Projektziele & Berichte</span>
+          </div>
+          <div class="stat">
+            <strong>Nachhaltig</strong>
+            <span class="small">Ausbildung & Ausstattung</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="wer-wir-sind" class="panel">
+      <h2>Wer sind wir und was machen wir?</h2>
+      <p>
+        <strong>Melzer-Madagaskar-Projekt e.V.</strong> ist eine gemeinnützige Initiative aus Deutschland.
+        Wir setzen uns dafür ein, dass Menschen im Süden Madagaskars Zugang zu grundlegender Gesundheitsversorgung erhalten –
+        unabhängig von Einkommen, Wohnort oder Infrastruktur.
+      </p>
+      <p>
+        Dazu unterstützen wir lokale Gesundheitsstationen, organisieren mobile Einsätze in schwer erreichbaren Dörfern
+        und investieren in Prävention (z. B. Aufklärung zu Hygiene und Mutter‑Kind‑Gesundheit). Unser Ansatz:
+        Wir arbeiten eng mit lokalen Fachkräften zusammen, stärken bestehende Strukturen und helfen dort, wo Lücken die größte
+        Wirkung haben.
+      </p>
     </section>
 
-    <section id="kontakt">
-        <h2>Kontakt/Spenden</h2>
-        <p>Für weitere Informationen oder um uns zu unterstützen, kontaktieren Sie uns bitte:</p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <input type="submit" value="Absenden">
-        </form>
-        <p>Oder spenden Sie direkt auf unser Konto: DE12 3456 7890 1234 5678 90</p>
+    <section id="projekte" class="panel">
+      <h2>Aktuelle Projekte</h2>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <div class="pill">Mobile Klinik</div>
+          <h3>Medizinische Einsätze in abgelegenen Gemeinden</h3>
+          <p>
+            Mit mobilen Teams ermöglichen wir regelmäßige Sprechstunden in Dörfern, die weit von der nächsten
+            Gesundheitseinrichtung entfernt sind – inklusive Basisdiagnostik, Behandlung häufiger Erkrankungen und
+            Überweisung komplexer Fälle an Partnerkliniken.
+          </p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="pill">Mutter & Kind</div>
+          <h3>Vorsorge und sichere Geburt</h3>
+          <p>
+            Wir unterstützen Hebammen und Gesundheitsstationen mit Schulungen, Verbrauchsmaterial und Aufklärung,
+            damit Schwangerschaftsvorsorge, Geburtsbegleitung und Neugeborenenversorgung verlässlicher werden –
+            besonders in Regionen mit hoher Mangelernährung und langen Anfahrtswegen.
+          </p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="pill">Ausstattung</div>
+          <h3>Grundausstattung für Gesundheitsstationen</h3>
+          <p>
+            Gemeinsam mit lokalen Partnern verbessern wir die Versorgung durch gezielte Anschaffungen wie
+            Untersuchungssets, Verbandsmaterial, einfache Labordiagnostik und Solar‑Beleuchtung – damit Behandlungen
+            auch bei Stromausfällen und in der Regenzeit möglich bleiben.
+          </p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="pill">Prävention</div>
+          <h3>Hygiene- und Gesundheitsaufklärung</h3>
+          <p>
+            In Zusammenarbeit mit Community Health Worker:innen führen wir Informationsveranstaltungen zu Hygiene,
+            Trinkwasser, Malaria‑Prävention und Durchfallerkrankungen durch und unterstützen niedrigschwellige Maßnahmen,
+            die Erkrankungen vorbeugen, bevor sie akut werden.
+          </p>
+        </article>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Deutsche NGO für medizinische Unterstützung in Madagaskar</p>
-    </footer>
+    <section id="kontakt-spenden" class="panel">
+      <h2>Kontakt / Spenden</h2>
+      <div class="contact">
+        <div class="card">
+          <h3>Kontakt</h3>
+          <p>
+            Schreiben Sie uns gern bei Fragen, Projektideen oder wenn Sie als Unternehmen/Organisation kooperieren möchten.
+          </p>
+          <ul class="list">
+            <li><strong>E‑Mail:</strong> <a href="mailto:info@melzer-madagaskar-projekt.de">info@melzer-madagaskar-projekt.de</a></li>
+            <li><strong>Vereinsvorsitzender:</strong> Dr. Sebastian Melzer</li>
+            <li><strong>Adresse:</strong> Gartenweg 9, 06712 Gutenborn OT Rippicha</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Spenden</h3>
+          <p>
+            Ihre Spende hilft, medizinisches Material zu beschaffen, mobile Einsätze zu finanzieren und lokale Teams zu stärken.
+            Als gemeinnütziger Verein stellen wir auf Wunsch eine Spendenbescheinigung aus.
+          </p>
+          <ul class="list">
+            <li><strong>Empfänger:</strong> Melzer-Madagaskar-Projekt e.V.</li>
+            <li><strong>IBAN:</strong> DE03 8304 0000 0203 1920 00</li>
+            <li><strong>BIC:</strong> COBADEFFXXX</li>
+          </ul>
+          <div class="ctaRow">
+            <a class="btn primary" href="mailto:info@melzer-madagaskar-projekt.de?subject=Spendenbescheinigung%20anfragen">Spendenbescheinigung anfragen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="small">
+      © <span id="year"></span> Melzer-Madagaskar-Projekt e.V.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
