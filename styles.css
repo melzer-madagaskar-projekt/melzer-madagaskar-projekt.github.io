@@ -90,14 +90,6 @@ nav a:hover{
   padding: 28px 18px 56px;
 }
 
-.hero{
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 18px;
-  align-items: stretch;
-  margin-top: 10px;
-}
-
 .panel{
   background: rgba(18,27,47,.85);
   border: 1px solid var(--border);
@@ -111,7 +103,6 @@ h2{ margin:0 0 10px; font-size: 22px; }
 h3{ margin:0 0 8px; font-size: 18px; }
 
 p{ margin: 10px 0; color: var(--muted); }
-.lead{ font-size: 16.5px; color: #d7e2ff; }
 
 .badge{
   display:inline-flex;
@@ -149,27 +140,6 @@ p{ margin: 10px 0; color: var(--muted); }
 }
 
 .btn:hover{ filter: brightness(1.06); }
-
-.stats{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.stat{
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 12px;
-  background: rgba(255,255,255,.03);
-}
-
-.stat strong{
-  display:block;
-  font-size: 18px;
-  color: var(--text);
-  margin-bottom: 3px;
-}
 
 section{ margin-top: 22px; }
 
@@ -223,7 +193,6 @@ footer{
 .small{ font-size:12.5px; }
 
 @media (max-width: 860px){
-  .hero{ grid-template-columns: 1fr; }
   .grid{ grid-template-columns: 1fr; }
   .contact{ grid-template-columns: 1fr; }
   nav ul{ gap: 6px; }
