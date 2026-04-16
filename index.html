@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Melzer-Madagaskar-Projekt</title>
   <meta name="description" content="Verein zur Unterstützung der medizinischen Versorgung in Süd-Madagaskar." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
@@ -46,26 +46,64 @@
       </div>
     </section>
 
-    <section id="partner" class="panel">
-      <h2>Unsere Partner</h2>
-      <div class="grid" role="list">
-        <article class="card" role="listitem">
-          <h3>Centre Medical de Taolagnaro</h3>
-        </article>
+	<section id="partner" class="panel">
+	  <h2>Unsere Partner</h2>
+	  
+	  <div class="slideshow-container">
+		<!-- Partner Slides -->
+		<article class="partner-slide active" data-index="0">
+		  <div class="partner-image">
+			<img src="images/cmdt_group_picture_2023-scaled.jpeg" alt="Centre Medical de Taolagnaro">
+		  </div>
+		  <h3>Centre Medical de Taolagnaro</h3>
+		  <p class="partner-description">Das Centre Medical de Taolagnaro ist unser wichtigster Partner in der Region Fort-Dauphin und bietet medizinische Grundversorgung für tausende Patienten jährlich.</p>
+		</article>
 
-        <article class="card" role="listitem">
-          <h3>Tatirano</h3>
-        </article>
+		<article class="partner-slide" data-index="1">
+		  <div class="partner-image">
+			<img src="images/tatirano_group_picture_2023-scaled.jpeg" alt="Tatirano">
+		  </div>
+		  <h3>Tatirano</h3>
+		  <p class="partner-description">Tatirano hat sich dem Ziel verschieben, allen Menschen in Madagaskar einen langfristigen Zugang zu sauberem Wasser zu gewährleisten.</p>
+		</article>
 
-        <article class="card" role="listitem">
-          <h3>Clinique St. Luc, Tuléar</h3>
-        </article>
+		<article class="partner-slide" data-index="2">
+		  <div class="partner-image">
+			<img src="images/stluc_2004.jpg" alt="Clinique St. Luc">
+		  </div>
+		  <h3>Clinique St. Luc, Tuléar</h3>
+		  <p class="partner-description">Die Clinique St. Luc in Tuléar ist seit 2001 unser erster Partner in Madagaskar.</p>
+		</article>
 
-        <article class="card" role="listitem">
-          <h3>Hebammenpraxis Sandrine</h3>
-        </article>
-      </div>
-    </section>
+		<article class="partner-slide" data-index="3">
+		  <div class="partner-image">
+			<img src="images/sandrine_2025.jpg" alt="Hebammenpraxis Sandrine">
+		  </div>
+		  <h3>Hebammenpraxis Sandrine</h3>
+		  <p class="partner-description">Die Hebammenpraxis Sandrine in Tuléar unterstützt werdende Mütter mit professioneller Betreuung vor, während und nach der Geburt.</p>
+		</article>
+
+		<!-- Navigation Arrows -->
+		<button class="slide-nav prev" aria-label="Vorheriger Partner">
+		  <svg viewBox="0 0 24 24" width="24" height="24">
+			<path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+		  </svg>
+		</button>
+		<button class="slide-nav next" aria-label="Nächster Partner">
+		  <svg viewBox="0 0 24 24" width="24" height="24">
+			<path fill="currentColor" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+		  </svg>
+		</button>
+	  </div>
+
+	  <!-- Dot Navigation -->
+	  <div class="slide-dots" role="tablist" aria-label="Partner Navigation">
+		<button class="dot active" data-index="0" role="tab" aria-selected="true" aria-label="Partner 1 von 4"></button>
+		<button class="dot" data-index="1" role="tab" aria-selected="false" aria-label="Partner 2 von 4"></button>
+		<button class="dot" data-index="2" role="tab" aria-selected="false" aria-label="Partner 3 von 4"></button>
+		<button class="dot" data-index="3" role="tab" aria-selected="false" aria-label="Partner 4 von 4"></button>
+	  </div>
+	</section>
 
     <section id="kontakt-spenden" class="panel">
       <h2>Kontakt / Spenden</h2>
@@ -109,5 +147,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  
+  <script src="js/slideshow.js"></script>
 </body>
 </html>
