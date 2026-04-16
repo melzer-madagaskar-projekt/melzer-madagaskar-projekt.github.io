@@ -104,18 +104,6 @@ h3{ margin:0 0 8px; font-size: 18px; }
 
 p{ margin: 10px 0; color: var(--muted); }
 
-.badge{
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  font-size: 13px;
-  color: #dff9f7;
-  background: rgba(79,209,197,.12);
-  border: 1px solid rgba(79,209,197,.35);
-  padding: 6px 10px;
-  border-radius: 999px;
-}
-
 .ctaRow{
   margin-top: 14px;
   display:flex;
@@ -158,17 +146,6 @@ section{ margin-top: 22px; }
 }
 
 .card p{ margin:0; color:var(--muted); }
-
-.pill{
-  display:inline-block;
-  font-size: 12px;
-  color: #eaf0ff;
-  border: 1px solid rgba(122,167,255,.35);
-  background: rgba(122,167,255,.10);
-  padding: 4px 8px;
-  border-radius: 999px;
-  margin-bottom: 8px;
-}
 
 .contact{
   display:grid;
