@@ -304,10 +304,6 @@ footer{
   animation: progress 15s linear infinite;
 }
 
-.slideshow-container:hover::after{
-  animation-play-state: paused;
-}
-
 @keyframes progress{
   from{ width: 0%; }
   to{ width: 100%; }
