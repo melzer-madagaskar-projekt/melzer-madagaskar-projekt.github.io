@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
   <header>
     <div class="nav">
       <a class="brand" href="#top">
@@ -18,16 +19,19 @@
       <nav aria-label="Hauptnavigation">
         <ul>
           <li><a href="#top">Wer wir sind</a></li>
-          <li><a href="#partner">Unsere Partner</a></li>
-          <li><a href="#kontakt-spenden">Kontakt / Spenden</a></li>
+          <li><a href="#partner">Partner</a></li>
+          <li><a href="#spenden">Spenden</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="container">
+
+    <!-- WER WIR SIND -->
     <section class="panel">
-	  <h1>Wer sind wir und was machen wir?</h1>
+      <h1>Wer sind wir und was machen wir?</h1>
       <p>
         <strong>Melzer-Madagaskar-Projekt e.V.</strong> ist eine gemeinnützige, spendenfinanzierte und unabhängige Initiative aus Deutschland.
         Wir setzen uns dafür ein, die medizinische Versorgung der Menschen im Süden Madagaskars zu verbessern –
@@ -43,141 +47,140 @@
         betroffen sind.
       </p>
       <div class="ctaRow">
-        <a class="btn primary" href="#kontakt-spenden">Jetzt spenden</a>
+        <a class="btn primary" href="#spenden">Jetzt spenden</a>
       </div>
     </section>
 
-	<section id="partner" class="panel">
-	  <h2>Unsere Partner</h2>
-	  
-	  <div class="slideshow-container">
-		<!-- Partner Slides -->
-		<article class="partner-slide active" data-index="0">
-		  <div class="partner-image">
-			<img src="images/cmdt_group_picture_2023-scaled.jpeg" alt="Centre Medical de Taolagnaro">
-		  </div>
-		  <h3>Centre Medical de Taolagnaro</h3>
-		  <p class="partner-description">Das Centre Medical de Taolagnaro ist unser wichtigster Partner in der Region Fort-Dauphin und bietet medizinische Grundversorgung für tausende Patienten jährlich.</p>
-		</article>
+    <!-- PARTNER -->
+    <section id="partner" class="panel">
+      <h2>Unsere Partner</h2>
+      
+      <div class="slideshow-container">
+        <!-- Partner Slides -->
+        <article class="partner-slide active" data-index="0">
+          <div class="partner-image">
+            <img src="images/cmdt_group_picture_2023-scaled.jpeg" alt="Centre Medical de Taolagnaro">
+          </div>
+          <h3>Centre Medical de Taolagnaro</h3>
+          <p class="partner-description">Das Centre Medical de Taolagnaro ist unser wichtigster Partner in der Region Fort-Dauphin und bietet medizinische Grundversorgung für tausende Patienten jährlich.</p>
+        </article>
 
-		<article class="partner-slide" data-index="1">
-		  <div class="partner-image">
-			<img src="images/tatirano_group_picture_2023-scaled.jpeg" alt="Tatirano">
-		  </div>
-		  <h3>Tatirano</h3>
-		  <p class="partner-description">Tatirano hat sich dem Ziel verschieben, allen Menschen in Madagaskar einen langfristigen Zugang zu sauberem Wasser zu gewährleisten.</p>
-		</article>
+        <article class="partner-slide" data-index="1">
+          <div class="partner-image">
+            <img src="images/tatirano_group_picture_2023-scaled.jpeg" alt="Tatirano">
+          </div>
+          <h3>Tatirano</h3>
+          <p class="partner-description">Tatirano hat sich dem Ziel verschrieben, allen Menschen in Madagaskar einen langfristigen Zugang zu sauberem Wasser zu gewährleisten.</p>
+        </article>
 
-		<article class="partner-slide" data-index="2">
-		  <div class="partner-image">
-			<img src="images/stluc_2004.jpg" alt="Clinique St. Luc">
-		  </div>
-		  <h3>Clinique St. Luc, Tuléar</h3>
-		  <p class="partner-description">Die Clinique St. Luc in Tuléar ist seit 2001 unser erster Partner in Madagaskar.</p>
-		</article>
+        <article class="partner-slide" data-index="2">
+          <div class="partner-image">
+            <img src="images/stluc_2004.jpg" alt="Clinique St. Luc">
+          </div>
+          <h3>Clinique St. Luc, Tuléar</h3>
+          <p class="partner-description">Die Clinique St. Luc in Tuléar ist seit 2001 unser erster Partner in Madagaskar.</p>
+        </article>
 
-		<article class="partner-slide" data-index="3">
-		  <div class="partner-image">
-			<img src="images/sandrine_2025.jpg" alt="Hebammenpraxis Sandrine">
-		  </div>
-		  <h3>Hebammenpraxis Sandrine</h3>
-		  <p class="partner-description">Die Hebammenpraxis Sandrine in Tuléar unterstützt werdende Mütter mit professioneller Betreuung vor, während und nach der Geburt.</p>
-		</article>
+        <article class="partner-slide" data-index="3">
+          <div class="partner-image">
+            <img src="images/sandrine_2025.jpg" alt="Hebammenpraxis Sandrine">
+          </div>
+          <h3>Hebammenpraxis Sandrine</h3>
+          <p class="partner-description">Die Hebammenpraxis Sandrine in Tuléar unterstützt werdende Mütter mit professioneller Betreuung vor, während und nach der Geburt.</p>
+        </article>
 
-		<!-- Navigation Arrows -->
-		<button class="slide-nav prev" aria-label="Vorheriger Partner">
-		  <svg viewBox="0 0 24 24" width="24" height="24">
-			<path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-		  </svg>
-		</button>
-		<button class="slide-nav next" aria-label="Nächster Partner">
-		  <svg viewBox="0 0 24 24" width="24" height="24">
-			<path fill="currentColor" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
-		  </svg>
-		</button>
-	  </div>
+        <!-- Navigation Arrows -->
+        <button class="slide-nav prev" aria-label="Vorheriger Partner">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="slide-nav next" aria-label="Nächster Partner">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+          </svg>
+        </button>
+      </div>
 
-	  <!-- Dot Navigation -->
-	  <div class="slide-dots" role="tablist" aria-label="Partner Navigation">
-		<button class="dot active" data-index="0" role="tab" aria-selected="true" aria-label="Partner 1 von 4"></button>
-		<button class="dot" data-index="1" role="tab" aria-selected="false" aria-label="Partner 2 von 4"></button>
-		<button class="dot" data-index="2" role="tab" aria-selected="false" aria-label="Partner 3 von 4"></button>
-		<button class="dot" data-index="3" role="tab" aria-selected="false" aria-label="Partner 4 von 4"></button>
-	  </div>
+      <!-- Dot Navigation -->
+      <div class="slide-dots" role="tablist" aria-label="Partner Navigation">
+        <button class="dot active" data-index="0" role="tab" aria-selected="true" aria-label="Partner 1 von 4"></button>
+        <button class="dot" data-index="1" role="tab" aria-selected="false" aria-label="Partner 2 von 4"></button>
+        <button class="dot" data-index="2" role="tab" aria-selected="false" aria-label="Partner 3 von 4"></button>
+        <button class="dot" data-index="3" role="tab" aria-selected="false" aria-label="Partner 4 von 4"></button>
+      </div>
+    </section>
+
+    <!-- SPENDEN -->
+    <section id="spenden" class="panel">
+      <h2>Spenden</h2>
+      <p>
+        Ihre Spende hilft, medizinisches Material zu beschaffen, mobile Einsätze zu finanzieren und lokale Teams zu stärken.
+        <strong>Wir sammeln in der Regel allgemeine Spenden</strong> und finanzieren damit bedarfsorientiert Maßnahmen bei unseren Partnern vor Ort.
+      </p>
+      
+      <div class="spenden-grid">
+        <div class="bank-details">
+          <ul class="list">
+            <li><strong>Empfänger:</strong> Melzer-Madagaskar-Projekt e.V.</li>
+            <li>
+              <strong>IBAN:</strong> 
+              <span id="iban">DE03 8304 0000 0203 1920 00</span>
+              <button type="button" class="copy-btn" data-copy="DE03830400000203192000" aria-label="IBAN kopieren">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-label">Kopieren</span>
+              </button>
+            </li>
+            <li><strong>BIC:</strong> COBADEFFXXX</li>
+            <li><strong>Bank:</strong> Commerzbank</li>
+            <li><strong>Verwendungszweck:</strong> Spende</li>
+          </ul>
+        </div>
+        
+        <div class="qr-code">
+          <img src="images/girocode.png" alt="GiroCode: QR-Code zum Scannen mit Banking-App" width="140" height="140">
+          <p class="qr-hint">Mit Banking-App scannen</p>
+        </div>
+      </div>
+
+      <details class="spendenbescheinigung">
+        <summary><strong>Spendenbescheinigung anfordern</strong></summary>
+        <p>Als gemeinnütziger Verein stellen wir Ihnen gern eine Spendenbescheinigung aus.</p>
+        <p><strong>Dafür benötigen wir:</strong></p>
+        <ul>
+          <li>Vollständiger Name</li>
+          <li>Anschrift</li>
+          <li>Spendenbetrag</li>
+          <li>Datum der Überweisung</li>
+        </ul>
+        <div class="ctaRow">
+          <a class="btn primary" href="mailto:info@melzer-madagaskar-projekt.de?subject=Spendenbescheinigung%20anfordern&body=Guten%20Tag%2C%0A%0Abitte%20senden%20Sie%20mir%20eine%20Spendenbescheinigung.%0A%0AName%3A%20%0AAnschrift%3A%20%0ABetrag%3A%20%0ADatum%20der%20%C3%9Cberweisung%3A%20%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">
+            Spendenbescheinigung anfragen
+          </a>
+        </div>
+      </details>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="panel">
+	  <h2>Kontakt</h2>
+	  <p>
+		Sie haben Fragen, Ideen oder möchten uns kennenlernen? Wir freuen uns über Ihre Nachricht!
+	  </p>
+	  <p>
+		<strong>E-Mail:</strong> <a href="mailto:info@melzer-madagaskar-projekt.de">info@melzer-madagaskar-projekt.de</a>
+	  </p>
 	</section>
 
-    <section id="kontakt-spenden" class="panel">
-	  <h2>Kontakt / Spenden</h2>
-	  
-	  <div class="card card--full">
-		<h3>Spenden</h3>
-		<p>
-		  Ihre Spende hilft, medizinisches Material zu beschaffen, mobile Einsätze zu finanzieren und lokale Teams zu stärken.
-		  <strong>Wir sammeln in der Regel allgemeine Spenden</strong> und finanzieren damit bedarfsorientiert Maßnahmen bei unseren Partnern vor Ort.
-		</p>
-		
-		<div class="spenden-grid">
-		  <div class="bank-details">
-			<ul class="list">
-			  <li><strong>Empfänger:</strong> Melzer-Madagaskar-Projekt e.V.</li>
-			  <li>
-				<strong>IBAN:</strong> 
-				<span id="iban">DE03 8304 0000 0203 1920 00</span>
-				<button type="button" class="copy-btn" data-copy="DE03830400000203192000" aria-label="IBAN kopieren">
-				  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-					<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-				  </svg>
-				  <span class="copy-label">Kopieren</span>
-				</button>
-			  </li>
-			  <li><strong>BIC:</strong> COBADEFFXXX</li>
-			  <li><strong>Bank:</strong> Commerzbank</li>
-			  <li><strong>Verwendungszweck:</strong> Spende</li>
-			</ul>
-		  </div>
-		  
-		  <div class="qr-code">
-			<img src="images/girocode.png" alt="GiroCode: QR-Code zum Scannen mit Banking-App" width="140" height="140">
-			<p class="qr-hint">Mit Banking-App scannen</p>
-		  </div>
-		</div>
-
-		<details class="spendenbescheinigung">
-		  <summary><strong>Spendenbescheinigung anfordern</strong></summary>
-		  <p>Als gemeinnütziger Verein stellen wir Ihnen gern eine Spendenbescheinigung aus.</p>
-		  <p><strong>Dafür benötigen wir:</strong></p>
-		  <ul>
-			<li>Vollständiger Name</li>
-			<li>Anschrift</li>
-			<li>Spendenbetrag</li>
-			<li>Datum der Überweisung</li>
-		  </ul>
-		  <div class="ctaRow">
-			<a class="btn primary" href="mailto:info@melzer-madagaskar-projekt.de?subject=Spendenbescheinigung%20anfordern&body=Guten%20Tag%2C%0A%0Abitte%20senden%20Sie%20mir%20eine%20Spendenbescheinigung.%0A%0AName%3A%20%0AAnschrift%3A%20%0ABetrag%3A%20%0ADatum%20der%20%C3%9Cberweisung%3A%20%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">
-			  Spendenbescheinigung anfragen
-			</a>
-		  </div>
-		</details>
-	  </div>
-
-	  <div class="card card--full card--compact">
-		<h3>Kontakt</h3>
-		<div class="kontakt-grid">
-		  <p><strong>E‑Mail:</strong> <a href="mailto:info@melzer-madagaskar-projekt.de">info@melzer-madagaskar-projekt.de</a></p>
-		  <p><strong>Vorsitzender:</strong> Dr. Sebastian Melzer</p>
-		  <p><strong>Adresse:</strong> Gartenweg 9, 06712 Gutenborn OT Rippicha</p>
-		</div>
-		<p class="small">Eingetragen im Vereinsregister Amtsgericht Gera VR 1385</p>
-	  </div>
-	</section>
   </main>
 
   <footer>
     <div class="footer-links">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
-      <a href="index.html#kontakt-spenden">Kontakt</a>
     </div>
     <div class="small">
       © <span id="year"></span> Melzer-Madagaskar-Projekt e.V.
@@ -187,8 +190,8 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  
   <script src="js/slideshow.js"></script>
   <script src="js/clipboard.js"></script>
+
 </body>
 </html>
