@@ -107,36 +107,70 @@
 	</section>
 
     <section id="kontakt-spenden" class="panel">
-      <h2>Kontakt / Spenden</h2>
-      <div class="contact">
-        <div class="card">
-          <h3>Spenden</h3>
-          <p>
-            Ihre Spende hilft, medizinisches Material zu beschaffen, mobile Einsätze zu finanzieren und lokale Teams zu stärken.
-            Als gemeinnütziger Verein stellen wir auf Wunsch eine Spendenbescheinigung aus.
-          </p>
-          <ul class="list">
-            <li><strong>Empfänger:</strong> Melzer-Madagaskar-Projekt e.V.</li>
-            <li><strong>IBAN:</strong> DE03 8304 0000 0203 1920 00</li>
-            <li><strong>BIC:</strong> COBADEFFXXX</li>
-          </ul>
-          <div class="ctaRow">
-            <a class="btn primary" href="mailto:info@melzer-madagaskar-projekt.de?subject=Spendenbescheinigung%20anfragen">Spendenbescheinigung anfragen</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Kontakt</h3>
-          <p>
-            Schreiben Sie uns gern bei Fragen, Projektideen oder wenn Sie als Unternehmen/Organisation kooperieren möchten.
-          </p>
-		  <ul class="list"></ul>
+	  <h2>Kontakt / Spenden</h2>
+	  
+	  <div class="card card--full">
+		<h3>Spenden</h3>
+		<p>
+		  Ihre Spende hilft, medizinisches Material zu beschaffen, mobile Einsätze zu finanzieren und lokale Teams zu stärken.
+		  <strong>Wir sammeln in der Regel allgemeine Spenden</strong> und finanzieren damit bedarfsorientiert Maßnahmen bei unseren Partnern vor Ort.
+		</p>
+		
+		<div class="spenden-grid">
+		  <div class="bank-details">
+			<ul class="list">
+			  <li><strong>Empfänger:</strong> Melzer-Madagaskar-Projekt e.V.</li>
+			  <li>
+				<strong>IBAN:</strong> 
+				<span id="iban">DE03 8304 0000 0203 1920 00</span>
+				<button type="button" class="copy-btn" data-copy="DE03830400000203192000" aria-label="IBAN kopieren">
+				  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+					<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+				  </svg>
+				  <span class="copy-label">Kopieren</span>
+				</button>
+			  </li>
+			  <li><strong>BIC:</strong> COBADEFFXXX</li>
+			  <li><strong>Bank:</strong> Commerzbank</li>
+			  <li><strong>Verwendungszweck:</strong> Spende</li>
+			</ul>
+		  </div>
+		  
+		  <div class="qr-code">
+			<img src="images/girocode.png" alt="GiroCode: QR-Code zum Scannen mit Banking-App" width="140" height="140">
+			<p class="qr-hint">Mit Banking-App scannen</p>
+		  </div>
+		</div>
+
+		<details class="spendenbescheinigung">
+		  <summary><strong>Spendenbescheinigung anfordern</strong></summary>
+		  <p>Als gemeinnütziger Verein stellen wir Ihnen gern eine Spendenbescheinigung aus.</p>
+		  <p><strong>Dafür benötigen wir:</strong></p>
+		  <ul>
+			<li>Vollständiger Name</li>
+			<li>Anschrift</li>
+			<li>Spendenbetrag</li>
+			<li>Datum der Überweisung</li>
+		  </ul>
+		  <div class="ctaRow">
+			<a class="btn primary" href="mailto:info@melzer-madagaskar-projekt.de?subject=Spendenbescheinigung%20anfordern&body=Guten%20Tag%2C%0A%0Abitte%20senden%20Sie%20mir%20eine%20Spendenbescheinigung.%0A%0AName%3A%20%0AAnschrift%3A%20%0ABetrag%3A%20%0ADatum%20der%20%C3%9Cberweisung%3A%20%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">
+			  Spendenbescheinigung anfragen
+			</a>
+		  </div>
+		</details>
+	  </div>
+
+	  <div class="card card--full card--compact">
+		<h3>Kontakt</h3>
+		<div class="kontakt-grid">
 		  <p><strong>E‑Mail:</strong> <a href="mailto:info@melzer-madagaskar-projekt.de">info@melzer-madagaskar-projekt.de</a></p>
-		  <p><strong>Vereinsvorsitzender:</strong> Dr. Sebastian Melzer</p>
+		  <p><strong>Vorsitzender:</strong> Dr. Sebastian Melzer</p>
 		  <p><strong>Adresse:</strong> Gartenweg 9, 06712 Gutenborn OT Rippicha</p>
-		  <p>Eingetragen im Vereinsregister Amtsgericht Gera VR 1385 als Melzer- Madagaskar- Pojekt e.V.</p>
-        </div>
-      </div>
-    </section>
+		</div>
+		<p class="small">Eingetragen im Vereinsregister Amtsgericht Gera VR 1385</p>
+	  </div>
+	</section>
   </main>
 
   <footer>
@@ -155,5 +189,6 @@
   </script>
   
   <script src="js/slideshow.js"></script>
+  <script src="js/clipboard.js"></script>
 </body>
 </html>
