@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; form-action 'self' mailto:; base-uri 'self';">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- 
+    TITEL: "Jahresbericht [JAHR] – Melzer-Madagaskar-Projekt"
+  -->
+  <title>Jahresbericht [JAHR] – Melzer-Madagaskar-Projekt</title>
+  
+  <!-- 
+    BESCHREIBUNG: 1-2 Sätze für Suchmaschinen
+    Beispiel: "Jahresbericht 2023: Besuche bei unseren Partnern, Trinkwasserprojekt und Unterstützung der Hebammenpraxis."
+  -->
+  <meta name="description" content="[KURZBESCHREIBUNG FÜR SUCHMASCHINEN]" />
+  
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Melzer-Madagaskar-Projekt</span>
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="../index.html">Wer wir sind</a></li>
+          <li><a href="../index.html#partner">Partner</a></li>
+          <li><a href="../index.html#spenden">Spenden</a></li>
+          <li><a href="../index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+      <a href="../index.html">Startseite</a>
+      <span aria-hidden="true">›</span>
+      <a href="../index.html#jahresberichte">Jahresberichte</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">[JAHR]</span>
+    </nav>
+
+    <article class="panel jahresbericht-detail">
+      
+      <!-- 
+        ==================
+        ÜBERSCHRIFT
+        ==================
+        Einfacher Titel ohne Untertitel
+      -->
+      <header class="jahresbericht-header">
+        <h1>Jahresbericht [JAHR]</h1>
+      </header>
+
+      <!-- 
+        ==================
+        ANREDE
+        ==================
+        Persönliche Begrüßung
+      -->
+      <p class="jahresbericht-anrede">
+        Liebe Mitglieder des Vereins, liebe Helfer, Spender und Unterstützer!
+      </p>
+
+      <!-- 
+        ==================
+        HERO-BILD (optional)
+        ==================
+        Breites Eingangsbild – kann entfernt werden, wenn nicht gewünscht
+        Seitenverhältnis ca. 21:9
+      -->
+      <figure class="jahresbericht-hero">
+        <img src="../images/jahresberichte/[JAHR]-hero.jpg" 
+             alt="[BILDBESCHREIBUNG]">
+        <figcaption>[BILDUNTERSCHRIFT]</figcaption>
+      </figure>
+
+      <!-- 
+        ==================
+        INHALT
+        ==================
+        
+        Verfügbare Absatz-Varianten:
+        
+        A) Nur Text
+        B) Nur Bild (einzeln)
+        C) Bildergalerie (2 Bilder nebeneinander)
+        D) Text + Bild nebeneinander
+        
+        Siehe Beispiele unten – kopieren und anpassen nach Bedarf
+      -->
+      <div class="jahresbericht-body">
+
+        <section class="abschnitt">
+          <h2>[ÜBERSCHRIFT]</h2>
+		  
+		  <!-- 
+		    ========================================
+		    VARIANTE A: NUR TEXT
+		    ========================================
+		    Einfacher Abschnitt mit Überschrift und Fließtext
+		  -->
+          <p>
+            [FLIESSTEXT ABSATZ 1]
+          </p>
+		  
+		  <!-- 
+            ========================================
+            VARIANTE B: NUR BILD (EINZELN)
+            ========================================
+            Ein Bild mit Unterschrift, volle Breite
+          -->
+          <figure class="jahresbericht-figure">
+            <img src="../images/jahresberichte/[JAHR]-[BILDNAME].jpg" 
+                 alt="[BILDBESCHREIBUNG]">
+            <figcaption>[BILDUNTERSCHRIFT]</figcaption>
+          </figure>
+		  
+		  <!-- 
+            ========================================
+            VARIANTE C: BILDERGALERIE (2 NEBENEINANDER)
+            ========================================
+            Zwei Bilder nebeneinander, auf Mobil untereinander
+          -->
+		  <div class="jahresbericht-gallery">
+            <figure>
+              <img src="../images/jahresberichte/[JAHR]-[BILDNAME-1].jpg" 
+                   alt="[BILDBESCHREIBUNG 1]">
+              <figcaption>[BILDUNTERSCHRIFT 1]</figcaption>
+            </figure>
+            <figure>
+              <img src="../images/jahresberichte/[JAHR]-[BILDNAME-2].jpg" 
+                   alt="[BILDBESCHREIBUNG 2]">
+              <figcaption>[BILDUNTERSCHRIFT 2]</figcaption>
+            </figure>
+          </div>
+		  
+		  <!-- 
+            ========================================
+            VARIANTE D: TEXT + BILD NEBENEINANDER
+            ========================================
+            Bild links, Text rechts (auf Mobil: Bild oben, Text unten)
+          -->
+		  <div class="abschnitt-media">
+            <figure class="abschnitt-media-image">
+              <img src="../images/jahresberichte/[JAHR]-[BILDNAME].jpg" 
+                   alt="[BILDBESCHREIBUNG]">
+              <figcaption>[BILDUNTERSCHRIFT – OPTIONAL]</figcaption>
+            </figure>
+            <div class="abschnitt-media-text">
+              <p>
+                [FLIESSTEXT]
+              </p>
+            </div>
+          </div>
+		  
+		  <!-- 
+            ========================================
+            VARIANTE D (UMGEKEHRT): TEXT LINKS, BILD RECHTS
+            ========================================
+          -->
+		  <div class="abschnitt-media abschnitt-media--reverse">
+            <figure class="abschnitt-media-image">
+              <img src="../images/jahresberichte/[JAHR]-[BILDNAME].jpg" 
+                   alt="[BILDBESCHREIBUNG]">
+              <figcaption>[BILDUNTERSCHRIFT – OPTIONAL]</figcaption>
+            </figure>
+            <div class="abschnitt-media-text">
+              <p>
+                [FLIESSTEXT]
+              </p>
+            </div>
+          </div>
+		  
+		  <!-- 
+            Weitere Absätze nach Bedarf hinzufügen...
+            Varianten beliebig kombinieren
+          -->
+		  
+        </section>
+
+      </div>
+
+      <!-- 
+        ==================
+        SIGNATUR / ABSCHLUSS
+        ==================
+        Persönlicher Abschluss mit Ort, Datum und Namen
+      -->
+      <footer class="jahresbericht-signatur">
+        <p>[ORT] im [MONAT] [JAHR DER VERÖFFENTLICHUNG]</p>
+        <p><strong>[NAME(N)]</strong></p>
+      </footer>
+
+      <!-- 
+        ==================
+        NAVIGATION
+        ==================
+        Links zu vorherigem/nächstem Bericht
+        
+        HINWEISE:
+        - Beim ältesten Bericht: class="jahresbericht-nav-link prev disabled"
+        - Beim neuesten Bericht: class="jahresbericht-nav-link next disabled"
+      -->
+      <nav class="jahresbericht-nav" aria-label="Weitere Jahresberichte">
+        
+        <!-- VORHERIGER (bei ältestem: disabled) -->
+        <a href="[VORJAHR].html" class="jahresbericht-nav-link prev">
+          <span class="nav-direction">← Vorheriger</span>
+          <span class="nav-title">Jahresbericht [VORJAHR]</span>
+        </a>
+        
+        <!-- ÜBERSICHT -->
+        <a href="../index.html#jahresberichte" class="jahresbericht-nav-link overview">
+          Alle Berichte
+        </a>
+        
+        <!-- NÄCHSTER (bei neuestem: disabled) -->
+        <a href="[FOLGEJAHR].html" class="jahresbericht-nav-link next">
+          <span class="nav-direction">Nächster →</span>
+          <span class="nav-title">Jahresbericht [FOLGEJAHR]</span>
+        </a>
+        
+      </nav>
+
+    </article>
+
+    <!-- SPENDEN-CTA -->
+    <section class="panel cta-panel">
+      <h2>Unsere Arbeit unterstützen</h2>
+      <p>
+        100 % Ihrer Spende fließen direkt nach Madagaskar. 
+        Helfen Sie uns, weitere Projekte zu realisieren.
+      </p>
+      <div class="ctaRow">
+        <a class="btn primary" href="../index.html#spenden">Jetzt spenden</a>
+        <a class="btn" href="../index.html#kontakt">Kontakt aufnehmen</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+      <a href="../index.html#kontakt">Kontakt</a>
+    </div>
+    <div class="small">
+      © <span id="year"></span> Melzer-Madagaskar-Projekt e.V.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

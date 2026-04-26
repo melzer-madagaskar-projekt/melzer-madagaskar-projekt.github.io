@@ -677,3 +677,575 @@ footer {
     gap: 1rem;
   }
 }
+
+/* ===================
+   Section: Jahresberichte
+   =================== */
+
+.jahresberichte-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+/* Card: Foto + Text nebeneinander */
+.jahresbericht-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jahresbericht-card:hover {
+  border-color: rgba(79, 209, 197, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.jahresbericht-link {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  align-items: start;
+}
+
+.jahresbericht-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+/* Bild */
+.jahresbericht-image {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.jahresbericht-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.jahresbericht-card:hover .jahresbericht-image img {
+  transform: scale(1.05);
+}
+
+/* Inhalt */
+.jahresbericht-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.jahresbericht-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.jahresbericht-content p {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.jahresbericht-cta {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+.jahresbericht-card:hover .jahresbericht-cta {
+  color: var(--accent2);
+}
+
+/* ===================
+   Details/Summary: Ausklappen
+   =================== */
+
+.jahresberichte-details {
+  margin-top: 1.5rem;
+}
+
+.jahresberichte-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0 auto;
+  width: fit-content;
+  background: transparent;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.jahresberichte-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.jahresberichte-details summary::after {
+  content: "▾";
+  font-size: 0.875rem;
+  transition: transform 0.3s ease;
+}
+
+.jahresberichte-details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.jahresberichte-details summary:hover {
+  background: rgba(79, 209, 197, 0.15);
+}
+
+.jahresberichte-details summary:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Text wechseln bei open */
+.jahresberichte-details summary span.show-less {
+  display: none;
+}
+
+.jahresberichte-details[open] summary span.show-more {
+  display: none;
+}
+
+.jahresberichte-details[open] summary span.show-less {
+  display: inline;
+}
+
+/* Grid innerhalb details */
+.jahresberichte-details .jahresberichte-grid {
+  margin-top: 1.25rem;
+  animation: fadeSlideIn 0.3s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================
+   Responsive: Jahresberichte
+   =================== */
+
+@media (max-width: 860px) {
+  .jahresberichte-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jahresbericht-link {
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Mobil: nur 2 Cards initial sichtbar */
+  .jahresbericht-card.initial-hidden-mobile {
+    display: none;
+  }
+
+  .jahresberichte-details[open] ~ .jahresberichte-grid .initial-hidden-mobile,
+  .jahresberichte-details .jahresbericht-card {
+    display: block;
+  }
+
+  /* Card: Bild oben, Text unten (mobil) */
+  .jahresbericht-link {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .jahresbericht-image {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+
+  .jahresbericht-content h3 {
+    font-size: 0.9375rem;
+  }
+
+  .jahresbericht-content p {
+    -webkit-line-clamp: 2;
+  }
+
+  .jahresberichte-details summary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===================
+   Breadcrumb
+   =================== */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.breadcrumb span[aria-current="page"] {
+  color: var(--text);
+}
+
+/* ===================
+   Jahresbericht: Detailseite
+   =================== */
+
+.jahresbericht-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header */
+.jahresbericht-header {
+  margin-bottom: 1rem;
+}
+
+.jahresbericht-header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+/* Anrede */
+.jahresbericht-anrede {
+  text-align: center;
+  font-style: italic;
+  color: var(--text);
+  margin: 0 0 1.5rem 0;
+}
+
+/* Hero-Bild */
+.jahresbericht-hero {
+  margin: 0 -24px 2rem;
+}
+
+.jahresbericht-hero img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
+.jahresbericht-hero figcaption {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-align: center;
+  padding: 0.75rem 24px 0;
+  font-style: italic;
+}
+
+/* Body */
+.jahresbericht-body {
+  line-height: 1.7;
+}
+
+/* Abschnitte */
+.abschnitt {
+  margin-bottom: 2.5rem;
+}
+
+.abschnitt h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.abschnitt p {
+  margin: 0 0 1rem 0;
+  color: var(--muted);
+}
+
+.abschnitt p:last-child {
+  margin-bottom: 0;
+}
+
+/* Einzelbild (volle Breite) */
+.jahresbericht-figure {
+  margin: 1.5rem 0;
+}
+
+.jahresbericht-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.jahresbericht-figure figcaption {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Bildergalerie (2 nebeneinander) */
+.jahresbericht-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.jahresbericht-gallery figure {
+  margin: 0;
+}
+
+.jahresbericht-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.jahresbericht-gallery figcaption {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Text + Bild nebeneinander */
+.abschnitt-media {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.abschnitt-media--reverse {
+  grid-template-columns: 1fr 280px;
+}
+
+.abschnitt-media--reverse .abschnitt-media-image {
+  order: 2;
+}
+
+.abschnitt-media--reverse .abschnitt-media-text {
+  order: 1;
+}
+
+.abschnitt-media-image {
+  margin: 0;
+}
+
+.abschnitt-media-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.abschnitt-media-image figcaption {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 0.5rem;
+  font-style: italic;
+}
+
+.abschnitt-media-text p {
+  margin: 0 0 1rem 0;
+}
+
+.abschnitt-media-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Signatur */
+.jahresbericht-signatur {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: right;
+}
+
+.jahresbericht-signatur p {
+  margin: 0.25rem 0;
+  color: var(--muted);
+}
+
+.jahresbericht-signatur strong {
+  color: var(--text);
+}
+
+/* Navigation */
+.jahresbericht-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.jahresbericht-nav-link {
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.jahresbericht-nav-link:hover {
+  border-color: var(--accent);
+  background: rgba(79, 209, 197, 0.08);
+}
+
+.jahresbericht-nav-link.prev {
+  text-align: left;
+}
+
+.jahresbericht-nav-link.next {
+  text-align: right;
+}
+
+.jahresbericht-nav-link.overview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.jahresbericht-nav-link.disabled {
+  visibility: hidden;
+}
+
+.nav-direction {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.nav-title {
+  display: block;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* CTA Panel */
+.cta-panel {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-panel h2 {
+  font-size: 1.25rem;
+}
+
+.cta-panel p {
+  max-width: 500px;
+  margin: 0.5rem auto 0;
+}
+
+.cta-panel .ctaRow {
+  justify-content: center;
+}
+
+/* ===================
+   Responsive: Detailseite
+   =================== */
+
+@media (max-width: 768px) {
+  .abschnitt-media {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .abschnitt-media--reverse .abschnitt-media-image,
+  .abschnitt-media--reverse .abschnitt-media-text {
+    order: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .jahresbericht-hero {
+    margin: 0 -18px 1.5rem;
+  }
+
+  .jahresbericht-hero img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .jahresbericht-hero figcaption {
+    padding: 0.5rem 18px 0;
+  }
+
+  .jahresbericht-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .jahresbericht-nav {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .jahresbericht-nav-link.overview {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+
+  .jahresbericht-nav-link.disabled {
+    display: none;
+  }
+
+  .abschnitt h2 {
+    font-size: 1.125rem;
+  }
+}
