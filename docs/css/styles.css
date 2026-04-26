@@ -87,7 +87,7 @@ section {
    Header & Navigation
    =================== */
 
-header {
+.site-header {
   position: sticky;
   top: 0;
   backdrop-filter: blur(10px);
