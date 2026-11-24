@@ -12,6 +12,7 @@ that supports medical care in southern Madagascar. It is a static site served by
   - `css/styles.css`: the only stylesheet (CSS variables in `:root`, dark theme)
   - `js/slideshow.js` (partner carousel), `js/clipboard.js` (IBAN copy button)
   - `images/`, with report images in `images/jahresberichte/<JAHR>-<name>.jpg`
+  - `videos/`, with report videos as `videos/<JAHR>-<name>.mp4`
 - `jahresbericht_template.html`: the template for new annual reports. It is not published.
 - `usecases.md`: the content strategy (top 5 use cases and personas)
 
@@ -36,6 +37,22 @@ that supports medical care in southern Madagascar. It is a static site served by
 3. Add a `jahresbericht-card` at the top of the grid in `docs/index.html#jahresberichte`.
    Only the 4 newest cards are always visible. Older cards go in the `<details>` block.
 4. Update the prev/next links on the neighbouring report. Mark the newest report's "next" link and the oldest report's "prev" link as `disabled`.
+
+### Videos
+
+Host videos in `docs/videos/`. The CSP blocks external embeds (YouTube, Vimeo), GitHub rejects files over 100 MB,
+and GitHub Pages does not serve Git LFS files. Every committed version stays in the git history, so get the size
+right before the first commit. Re-encode with `ffmpeg` to 720p H.264 at CRF 28. That makes about 5–10 MB per minute:
+
+```bash
+ffmpeg -i in.mp4 -vf "scale=-2:720" -c:v libx264 -preset slow -crf 28 -profile:v high -pix_fmt yuv420p \
+  -c:a aac -b:a 96k -ac 2 -movflags +faststart docs/videos/<JAHR>-<name>.mp4
+```
+
+Take a poster frame from the video (`ffmpeg -ss 2 -i <video> -frames:v 1 -q:v 4 <poster>.jpg`) and save it as
+`images/jahresberichte/<JAHR>-video-<name>.jpg`. Embed the video with `preload="none"` so nothing downloads before
+play, and put a download link inside `<video>` as the fallback. See `jahresberichte/2022.html` for the markup
+(`figure.jahresbericht-video`, which works as a full-width figure or inside `.jahresbericht-gallery`).
 
 ## Testing
 

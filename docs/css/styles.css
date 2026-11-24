@@ -1006,6 +1006,38 @@ footer {
   margin-bottom: 0;
 }
 
+/* Zitat */
+.jahresbericht-zitat {
+  margin: 1.5rem 0;
+  padding: 0.75rem 0 0.75rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+}
+
+.jahresbericht-zitat .jahresbericht-zitat-quelle {
+  font-size: 0.875rem;
+  font-style: normal;
+  color: var(--text);
+}
+
+/* Video (in Einzelbild oder Galerie) */
+.jahresbericht-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  background: #000;
+}
+
+.jahresbericht-video figcaption {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 0.5rem;
+  font-style: italic;
+}
+
 /* Einzelbild (volle Breite) */
 .jahresbericht-figure {
   margin: 1.5rem 0;
