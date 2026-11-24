@@ -17,6 +17,8 @@ that supports medical care in southern Madagascar. It is a static site served by
 
 ## Conventions
 
+- Before adding or restructuring content, read `usecases.md` and make sure the change serves at least one of
+  its use cases and personas.
 - No build step, framework or package manager. Write plain HTML, CSS and vanilla JS only.
 - All content is in **German** (`lang="de"`).
 - Every page has a strict CSP meta tag (`default-src 'self'`). Do not add external fonts, CDNs,
