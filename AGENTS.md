@@ -40,8 +40,13 @@ that supports medical care in southern Madagascar. It is a static site served by
 Serve the site with `python -m http.server -d docs 8765` and open it in a browser. Check the layout on mobile and desktop,
 check that the links work, and check the browser console for CSP violations.
 
-For automated checks, use [Playwright](https://playwright.dev/python/) with headless Chromium. It is not a project
-dependency, so install it outside the repo (`pip install playwright && playwright install --with-deps chromium`).
-Load each page from the local server (not `file://`), then assert on the DOM, for example that the footer
-`#year` is filled in. Also collect `console` messages and treat any "Content Security Policy" error as a failure.
-Chrome's warning that `frame-ancestors` is ignored in `<meta>` is known and harmless.
+For automated checks, use [Playwright](https://playwright.dev/python/) with headless Chromium:
+
+```bash
+tools/setup-playwright.sh                        # one-time; safe to re-run. Installs into ~/.venvs/playwright
+~/.venvs/playwright/bin/python tools/check_pages.py
+```
+
+`check_pages.py` serves `docs/` locally and loads every page. A page fails if it logs a CSP error, leaves the footer
+`#year` empty, or requests a local file that 404s. Chrome's warning that `frame-ancestors` is ignored in `<meta>` is
+known and harmless, so the check ignores it. Playwright is not a site dependency: never add it to `docs/`.
